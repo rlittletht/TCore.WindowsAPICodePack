@@ -48,6 +48,9 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <Version>1.1.1.2</Version>
+    <Authors>Microsoft</Authors>
+    <PackageId>TCore.Microsoft.WindowsAPICodePack.Shell</PackageId>
+    <Title>Microsoft Wsindows API CodePack for Shell (Thetasoft Fork)</Title>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

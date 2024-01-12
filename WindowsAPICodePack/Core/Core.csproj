@@ -41,8 +41,9 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Microsoft Windows API CodePack (Thetasoft Fork)</Title>
+    <Title>Microsoft Windows API CodePack Core (Thetasoft Fork)</Title>
     <Version>1.1.1.2</Version>
+    <PackageId>TCore.Microsoft.WindowsAPICodePack.Core</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
