@@ -179,7 +179,7 @@ namespace Microsoft.WindowsAPICodePack.ApplicationServices
                 CoreHelpers.ThrowIfNotXP();
                 return monitorRequired;
             }
-            [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
+            //[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
             set
             {
                 CoreHelpers.ThrowIfNotXP();
@@ -214,7 +214,7 @@ namespace Microsoft.WindowsAPICodePack.ApplicationServices
 
                 return requestBlockSleep;
             }
-            [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
+            ////[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
             set
             {
                 CoreHelpers.ThrowIfNotXP();

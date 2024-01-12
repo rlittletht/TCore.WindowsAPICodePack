@@ -22,7 +22,8 @@ namespace Microsoft.WindowsAPICodePack.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class LocalizedMessages {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+    public class LocalizedMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -315,7 +316,7 @@ namespace Microsoft.WindowsAPICodePack.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Reference path is invalid..
         /// </summary>
-        internal static string InvalidReferencePath {
+        public static string InvalidReferencePath {
             get {
                 return ResourceManager.GetString("InvalidReferencePath", resourceCulture);
             }
@@ -672,4 +673,5 @@ namespace Microsoft.WindowsAPICodePack.Resources {
             }
         }
     }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }

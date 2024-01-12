@@ -1,30 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-      <TargetFrameworks>net7.0-windows</TargetFrameworks>
+      <TargetFrameworks>net462;net472;net48;net7.0-windows</TargetFrameworks>
       <Configurations>Debug;Release;ProdDebug</Configurations>
-      <UseWPF>true</UseWPF>
       <LangVersion>10</LangVersion>
       <UseWindowsForms>true</UseWindowsForms>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.1.1.2</AssemblyVersion>
-    <FileVersion>1.1.1.2</FileVersion>
-    <Description>WindowsAPICodePack for Shell</Description>
-    <Company>Microsoft</Company>
-    <Copyright>Copyright ┬⌐ Microsoft 2010</Copyright>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AA0C00CB-8699-4F37-BFAE-40CA87ACC06D}</ProjectGuid>
+    <ProjectGuid>{2E1FB0DF-F9BB-4909-9F32-2D9D022A8E57}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.WindowsAPICodePack.Shell</RootNamespace>
-    <AssemblyName>Microsoft.WindowsAPICodePack.Shell</AssemblyName>
+    <RootNamespace>Microsoft.WindowsAPICodePack</RootNamespace>
+    <AssemblyName>Microsoft.WindowsAPICodePack</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -47,7 +38,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <Version>1.1.1.2</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,10 +48,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Microsoft.WindowsAPICodePack.xml</DocumentationFile>
     <CodeAnalysisRules>
     </CodeAnalysisRules>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -72,32 +62,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>bin\Release\Microsoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Microsoft.WindowsAPICodePack.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'CodeAnalysisDebug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\CodeAnalysisDebug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
-    <DocumentationFile>bin\Debug\Microsoft.WindowsAPICodePack.Shell.XML</DocumentationFile>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisRules>
-    </CodeAnalysisRules>
-    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
-    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
-    <ErrorReport>prompt</ErrorReport>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x64\Debug\</OutputPath>
     <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\Microsoft.WindowsAPICodePack.Shell.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Microsoft.WindowsAPICodePack.XML</DocumentationFile>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Debug\Microsoft.WindowsAPICodePack.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
@@ -114,7 +89,7 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Release\Microsoft.WindowsAPICodePack.Shell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Release\Microsoft.WindowsAPICodePack.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
@@ -124,29 +99,37 @@
     <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CodeAnalysisDebug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\CodeAnalysisDebug\</OutputPath>
-    <DefineConstants>CODE_ANALYSIS;TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
-    <DocumentationFile>bin\Debug\Microsoft.WindowsAPICodePack.Shell.XML</DocumentationFile>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisLogFile>bin\CodeAnalysisDebug\Microsoft.WindowsAPICodePack.Shell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
-    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
-    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
-    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
-    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <ItemGroup>
-    <CodeAnalysisDictionary Include="CustomDictionary.xml" />
+  <!--<ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" />
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>-->
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CustomDictionary.xml">
+      <SubType>Designer</SubType>
+    </CodeAnalysisDictionary>
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

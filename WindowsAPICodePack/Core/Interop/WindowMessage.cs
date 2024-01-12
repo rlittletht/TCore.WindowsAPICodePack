@@ -5,7 +5,8 @@ using System.Text;
 
 namespace MS.WindowsAPICodePack.Internal
 {
-    internal enum WindowMessage
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+    public enum WindowMessage
     {
         Null = 0x00,
         Create = 0x01,
@@ -230,5 +231,6 @@ namespace MS.WindowsAPICodePack.Internal
 
         User = 0x400,
         App = 0x8000,
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 }

@@ -461,7 +461,9 @@ namespace Microsoft.WindowsAPICodePack.Shell
             }
             return hashValue.Value;
         }
+#pragma warning disable SYSLIB0021 // Type or member is obsolete
         private static MD5CryptoServiceProvider hashProvider = new MD5CryptoServiceProvider();
+#pragma warning restore SYSLIB0021 // Type or member is obsolete
         private int? hashValue;
 
         /// <summary>

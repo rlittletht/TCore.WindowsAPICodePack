@@ -77,7 +77,8 @@ namespace MS.WindowsAPICodePack.Internal
     /// Provide Error Message Helper Methods.
     /// This is intended for Library Internal use only.
     /// </summary>
-    internal static class CoreErrorHelper
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+    public static class CoreErrorHelper
     {
         /// <summary>
         /// This is intended for Library Internal use only.
@@ -158,4 +159,5 @@ namespace MS.WindowsAPICodePack.Internal
 
 
     }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }
